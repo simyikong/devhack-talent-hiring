@@ -1,7 +1,7 @@
 <!--<c-header class="mb-4 d-print-none" position="sticky">-->
 <ng-container>
   <c-container [fluid]="true">
-    <button
+    <!-- <button
       toggle="visible"
       cHeaderToggler
       [cSidebarToggle]="sidebarId"
@@ -11,9 +11,10 @@
         name="cilMenu"
         size="lg"
       ></svg>
-    </button>
+    </button> -->
+
     <c-header-nav class="d-none d-lg-flex me-auto">
-      <c-nav-item>
+      <!-- <c-nav-item>
         <a cNavLink routerLink="/dashboard" routerLinkActive="active">
           Dashboard
         </a>
@@ -25,7 +26,34 @@
         <a cNavLink routerLink="/settings" routerLinkActive="active">
           Settings
         </a>
-      </c-nav-item>
+      </c-nav-item> -->
+
+      <!-- Map the other nav items to your header menu items -->
+      <ng-container *ngFor="let item of navItems">
+        <ng-container *ngIf="item.children; else regularItem">
+          <c-dropdown variant="nav-item" alignment="end">
+            <button cButton color="" [caret]="true" cDropdownToggle class="py-0">
+              {{ item.name }}
+            </button>
+            <ul cDropdownMenu class="pt-0 pr-5 w-auto">
+              <ng-container *ngFor="let childItem of item.children">
+                <li>
+                  <a [routerLink]="childItem.url" cDropdownItem>
+                    {{ childItem.name }}
+                  </a>
+                </li>
+              </ng-container>
+            </ul>
+          </c-dropdown>
+        </ng-container>
+        <ng-template #regularItem>
+          <c-nav-item>
+            <a cNavLink [routerLink]="item.url" routerLinkActive="active">
+              {{ item.name }}
+            </a>
+          </c-nav-item>
+        </ng-template>
+      </ng-container>
     </c-header-nav>
 
     <c-header-nav class="d-none d-lg-flex">

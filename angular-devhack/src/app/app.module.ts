@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
+
 // Import routing module
 import { AppRoutingModule } from './app-routing.module';
 
@@ -32,12 +33,16 @@ import {
   SharedModule,
   SidebarModule,
   TabsModule,
-  UtilitiesModule
+  UtilitiesModule,
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { JobListComponent } from './views/pages/job-list/job-list.component';
 import { TalentDiscoveryComponent } from './views/pages/talent-discovery/talent-discovery.component';
+import { TalentDashboardPageComponent } from './modules/talent-module/talent-dashboard-page/talent-dashboard-page.component';
+import { AutomatedResumeComponent } from './modules/talent-module/automated-resume/automated-resume.component';
+import { UpskillYourselfComponent } from './modules/talent-module/upskill-yourself/upskill-yourself.component';
+
 
 const APP_CONTAINERS = [
   DefaultFooterComponent,
@@ -46,7 +51,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, JobListComponent, TalentDiscoveryComponent],
+  declarations: [AppComponent, ...APP_CONTAINERS, JobListComponent, TalentDiscoveryComponent, TalentDashboardPageComponent, AutomatedResumeComponent, UpskillYourselfComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -73,7 +78,7 @@ const APP_CONTAINERS = [
     BadgeModule,
     ListGroupModule,
     CardModule,
-    NgScrollbarModule
+    NgScrollbarModule,
   ],
   providers: [
     {

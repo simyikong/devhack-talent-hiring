@@ -12,17 +12,36 @@ export const navItems: INavData[] = [
   },
   {
     title: true,
+    name: 'Talent Module'
+  },
+  {
+    name: 'Talent Dashboard',
+    url: '/talent/dashboard',
+    iconComponent: { name: 'cil-speedometer' }
+  },
+  {
+    name: 'Automated Resume',
+    url: '/talent/resume',
+    iconComponent: { name: 'cil-file' }
+  },
+  {
+    name: 'Upskill Yourself',
+    url: '/talent/upskill',
+    iconComponent: { name: 'cil-pencil' }
+  },
+  {
+    title: true,
     name: 'Talent Sourcing'
   },
   {
     //Web Scraping and Candidate Retrieval
-    name: 'Talent Discovery',
+    name: 'Talent Discovery(Web Scrap)',
     url: '/talent-discovery',
     iconComponent: { name: 'cil-drop' }
   },
   {
     //job list
-    name: 'Job Pending',
+    name: 'Your Job Posts',
     url: '/job-list',
     linkProps: { fragment: 'someAnchor' },
     iconComponent: { name: 'cil-pencil' }
@@ -251,26 +270,38 @@ export const navItems: INavData[] = [
       {
         name: 'Job Posting',
         url: '/job-posting'
-      }
+      },
+      {
+        name: 'Test Page 1',
+        url: '/test-pg1'
+      },
+      {
+        name: 'Test Page 2',
+        url: '/test-pg2'
+      },
+      {
+        name: 'Test Page 3',
+        url: '/test-pg3'
+      },
 
     ]
-  },
-  {
-    title: true,
-    name: 'Links',
-    class: 'py-0'
-  },
-  {
-    name: 'Docs',
-    url: 'https://coreui.io/angular/docs/templates/installation',
-    iconComponent: { name: 'cil-description' },
-    attributes: { target: '_blank', class: '-text-dark' },
-    class: 'mt-auto'
-  },
-  {
-    name: 'Try CoreUI PRO',
-    url: 'https://coreui.io/product/angular-dashboard-template/',
-    iconComponent: { name: 'cil-layers' },
-    attributes: { target: '_blank' }
   }
+  // {
+  //   title: true,
+  //   name: 'Links',
+  //   class: 'py-0'
+  // },
+  // {
+  //   name: 'Docs',
+  //   url: 'https://coreui.io/angular/docs/templates/installation',
+  //   iconComponent: { name: 'cil-description' },
+  //   attributes: { target: '_blank', class: '-text-dark' },
+  //   class: 'mt-auto'
+  // },
+  // {
+  //   name: 'Try CoreUI PRO',
+  //   url: 'https://coreui.io/product/angular-dashboard-template/',
+  //   iconComponent: { name: 'cil-layers' },
+  //   attributes: { target: '_blank' }
+  // }
 ];

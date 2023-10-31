@@ -9,6 +9,12 @@ import { RegisterComponent } from './views/pages/register/register.component';
 import { JobPostingComponent } from './views/pages/job-posting/job-posting.component';
 import { JobListComponent } from './views/pages/job-list/job-list.component';
 import { TalentDiscoveryComponent } from './views/pages/talent-discovery/talent-discovery.component';
+import { TestPg1Component } from './views/pages/test-pg1/test-pg1.component';
+import { TestPg2Component} from './views/pages/test-pg2/test-pg2.component';
+import { TestPg3Component} from './views/pages/test-pg3/test-pg3.component';
+import { TalentDashboardPageComponent } from './modules/talent-module/talent-dashboard-page/talent-dashboard-page.component';
+import { AutomatedResumeComponent } from './modules/talent-module/automated-resume/automated-resume.component';
+import { UpskillYourselfComponent } from './modules/talent-module/upskill-yourself/upskill-yourself.component';
 
 const routes: Routes = [
   {
@@ -16,6 +22,9 @@ const routes: Routes = [
     redirectTo: 'dashboard',
     pathMatch: 'full'
   },
+  { path: 'talent/dashboard', component: TalentDashboardPageComponent },
+  { path: 'talent/resume', component: AutomatedResumeComponent },
+  { path: 'talent/upskill', component: UpskillYourselfComponent },
   {
     path: '',
     component: DefaultLayoutComponent,
@@ -122,6 +131,27 @@ const routes: Routes = [
     component: TalentDiscoveryComponent,
     data: {
       title: 'Talents Around You'
+    }
+  },
+  {
+    path: 'test-pg1',
+    component: TestPg1Component,
+    data: {
+      title: 'Test page 1'
+    }
+  },
+  {
+    path: 'test-pg2',
+    component: TestPg2Component,
+    data: {
+      title: 'Test page 2'
+    }
+  },
+  {
+    path: 'test-pg3',
+    component: TestPg3Component,
+    data: {
+      title: 'Test page 3'
     }
   },
   {path: '**', redirectTo: 'dashboard'}
