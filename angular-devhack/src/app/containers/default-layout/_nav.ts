@@ -4,63 +4,61 @@ export const navItems: INavData[] = [
   {
     name: 'Dashboard',
     url: '/dashboard',
-    iconComponent: { name: 'cil-speedometer' },
+    // iconComponent: { name: 'cil-speedometer' },
     badge: {
       color: 'info',
       text: 'NEW'
     }
   },
   {
-    title: true,
-    name: 'Talent Module'
+    name: 'Talent Module',
+    children: [
+      {
+        name: 'Talent Dashboard',
+        url: '/talent/dashboard',
+        // iconComponent: { name: 'cil-speedometer' }
+      },
+      {
+        name: 'Automated Resume',
+        url: '/talent/resume',
+        // iconComponent: { name: 'cil-file' }
+      },
+      {
+        name: 'Upskill Yourself',
+        url: '/talent/upskill',
+        // iconComponent: { name: 'cil-pencil' }
+      }
+      ]
   },
   {
-    name: 'Talent Dashboard',
-    url: '/talent/dashboard',
-    iconComponent: { name: 'cil-speedometer' }
-  },
-  {
-    name: 'Automated Resume',
-    url: '/talent/resume',
-    iconComponent: { name: 'cil-file' }
-  },
-  {
-    name: 'Upskill Yourself',
-    url: '/talent/upskill',
-    iconComponent: { name: 'cil-pencil' }
-  },
-  {
-    title: true,
-    name: 'Talent Sourcing'
-  },
-  {
-    //Web Scraping and Candidate Retrieval
-    name: 'Talent Discovery(Web Scrap)',
-    url: '/talent-discovery',
-    iconComponent: { name: 'cil-drop' }
-  },
-  {
-    //job list
-    name: 'Your Job Posts',
-    url: '/job-list',
-    linkProps: { fragment: 'someAnchor' },
-    iconComponent: { name: 'cil-pencil' }
-  },
-  {
-    //interview
-    name: 'Interview Session Invitations',
-    url: '/theme/typography',
-    linkProps: { fragment: 'someAnchor' },
-    iconComponent: { name: 'cil-pencil' }
-  },
-  {
-    name: 'Candidate Evaluation',
-    title: true
+    name: 'Talent Sourcing',
+    children : [
+      {
+        //Web Scraping and Candidate Retrieval
+        name: 'Talent Discovery(Web Scrap)',
+        url: '/talent-discovery',
+        // iconComponent: { name: 'cil-drop' }
+      },
+      {
+        //job list
+        name: 'Your Job Posts',
+        url: '/job-list',
+        linkProps: { fragment: 'someAnchor' },
+        // iconComponent: { name: 'cil-pencil' }
+      },
+      {
+        //interview
+        name: 'Interview Session Invitations',
+        url: '/theme/typography',
+        linkProps: { fragment: 'someAnchor' },
+        // iconComponent: { name: 'cil-pencil' }
+      }
+    ]
   },
   {
     name: 'Base',
     url: '/base',
-    iconComponent: { name: 'cil-puzzle' },
+    // iconComponent: { name: 'cil-puzzle' },
     children: [
       {
         name: 'Accordion',
@@ -127,7 +125,7 @@ export const navItems: INavData[] = [
   {
     name: 'Buttons',
     url: '/buttons',
-    iconComponent: { name: 'cil-cursor' },
+    // iconComponent: { name: 'cil-cursor' },
     children: [
       {
         name: 'Buttons',
@@ -146,7 +144,7 @@ export const navItems: INavData[] = [
   {
     name: 'Forms',
     url: '/forms',
-    iconComponent: { name: 'cil-notes' },
+    // iconComponent: { name: 'cil-notes' },
     children: [
       {
         name: 'Form Control',
@@ -185,11 +183,11 @@ export const navItems: INavData[] = [
   {
     name: 'Charts',
     url: '/charts',
-    iconComponent: { name: 'cil-chart-pie' }
+    // iconComponent: { name: 'cil-chart-pie' }
   },
   {
     name: 'Icons',
-    iconComponent: { name: 'cil-star' },
+    // iconComponent: { name: 'cil-star' },
     url: '/icons',
     children: [
       {
@@ -213,7 +211,7 @@ export const navItems: INavData[] = [
   {
     name: 'Notifications',
     url: '/notifications',
-    iconComponent: { name: 'cil-bell' },
+    // iconComponent: { name: 'cil-bell' },
     children: [
       {
         name: 'Alerts',
@@ -236,7 +234,7 @@ export const navItems: INavData[] = [
   {
     name: 'Widgets',
     url: '/widgets',
-    iconComponent: { name: 'cil-calculator' },
+    // iconComponent: { name: 'cil-calculator' },
     badge: {
       color: 'info',
       text: 'NEW'
@@ -249,7 +247,7 @@ export const navItems: INavData[] = [
   {
     name: 'Pages',
     url: '/login',
-    iconComponent: { name: 'cil-star' },
+    // iconComponent: { name: 'cil-star' },
     children: [
       {
         name: 'Login',
